@@ -1,0 +1,395 @@
+
+Cloud 
+- virtual kitchen 
+
+************
+Service models 
+1. SaaS - package - CRMS, HRMS, 0365, Gsuite... { google apps for work] 
+2. PaaS - focus on apps than on opers
+3. IaaS - Compute, network, db, storage... price - 0.5$/GB, VM cost  0.016 /hr 
+
+
+FaaS - Function as a service - serverless  - Lambda.. 
+cloud native applns - microservices, containers,devops, CICD...[ 4 pillars]  
+
+notification - sms, email.. sns, sqs.. 
+
+SERVERLESS - pricing - reqeusts /second/min/hr 
+thumbnails for video - 1000videos/hr 
+
+***********
+Deployment models 
+public,  - pre defined outburst - public car(ola, uber) 
+private -  security , ownership  - own car 
+hybrid - security + scale- combo- zoom car 
+community - reuse, templates, federated ...  - accessories - plug and play model 
+
+Usecase : 
+1. big million flash sale - computing has to auto scale- scale and numbers   
+2. get your bank account created - incase you dont have to ensure you are enrolled under 
+PM yojana..  - security + scale
+3. all my official docs on cloud - sensitiveness
+4. reuse the social networking 
+
+CSP - AWS, AZure, GCP, IBM.. 
+
+Global infra 
+https://aws.amazon.com/about-aws/global-infrastructure/
+Infosys - DCs 
+
+Region  - geo mark - Karnataka , Maharastra, Tamilnadu
+AZ - 2 or more (Manglore,banglore, Mysore,hubli), (ph1, ph2, ph3.. ) , ( mcity, shols)
+HA - High availability 
+1 local region 
+edge location  - nearer to the customer - brnaches/outlets - cloudfront - CDN 
+
+Creating an account 
+https://aws.amazon.com/free/?awsf.Free%20Tier%20Types=categories%23featured
+- CC/DB - Identification + validation + billing 
+
+PaaS, IaaS 
+compute, storage, network, developer tools
+mmanagement tools, dB , security 
+
+ETA courses:
+cloud computing
+intro to aws 
+compute, network, strage , db 
+iam, managtools, cli 
+developing on aws 
+architecon on aws  + more.. 
+
+Storage v/s db 
+
+storage 					        DB 
+need not be organized 				to be organized 
+no need of a schema 				to be schematic 
+querying is not a language 			can be queried with SQL /otehr equvl way 	
+any data							important data
+
+STorage - 
+hot - data frequently accessed,  synced to internet, fast 
+
+cold  - data infrequtly accessed, offline , slow 
+
+CCTV camera footages- 1 week in hot stroage-> move it to cold 
+
+S3 - https://aws.amazon.com/s3/pricing/ - static files 
+
+storage classes 
+standard  - default - 30 days  
+S3-IA 
+S3  one zone 
+s3 - glacier - cold
+
+
+bucket - space to hold objects 
+
+CRoss region replication - explictly 
+
+****3 types of resources 
+1. fully manged - s3, dynamoDB
+2. managed - rds 
+3. unmanaged  - ec2(vms)  - placement groups 
+
+
+DB - PaaS 
+Transactional  - OLTP
+RDS  - relational - oracle, MS SQL , mysql, postgres, mariadb, aurora
+DynamoDB  - NoSQL  
+DocumentDB - NoSQL - mongodb compatible 
+Neptune - NoSQL - Graph DB
+
+Performance
+ElastiCache - improve performance 
+
+Analytical  - Data warehousing- OLAP 
+Redshift - infomatica, terradata. 
+
+***LICENSING MODEL 
+
+GNU license  - Open source - mysql, postgres, mariadb - GPL - general public license 
+BYOL  -Bring your own license- proprietary softwares - Oracle, MSSQL - aws service usage
+licenses inluded - software licens + aws service usage
+
+***REPLICATION MODEL 
+fail over replica - DR - main zone (a) , copy zone (b) 
+
+read replica - same or different - multiple reads 
+
+
+**MONITORING 
+- basic  - by default - free of cost 
+- enhanced  - by choice - with extra cost
+
+** Maintainence 
+- major version upgrade  mysql 5.6 -> mysql 6.1 
+- minor version upgrade  mysql 5.6 -> mysql 5.7 
+
+DYNAMODB 
+table  - table 
+row - item 
+column  - attribute 
+values- entity 
+
+
+*********************
+QWIKLABS
+- sign up for an account
+https://www.qwiklabs.com/
+
+** 3 types of users on AWS 
+1. Root - all permission - CC details 
+2. IAM user  - no priv by default , need to grant explictly 
+3. Federated user - restricted access - SSO
+Qwiklabs - AWS 
+
+ACTION ITEMS 
+1. Introduction to Amazon Simple Storage Service (S3)
+https://www.qwiklabs.com/focuses/278?catalog_rank=%7B%22rank%22%3A3%2C%22num_filters%22%3A2%2C%22has_search%22%3Afalse%7D&parent=catalog
+
+2. Introduction to Amazon DynamoDB
+https://www.qwiklabs.com/focuses/271?catalog_rank=%7B%22rank%22%3A1%2C%22num_filters%22%3A1%2C%22has_search%22%3Atrue%7D&parent=catalog&search_id=2567276
+
+**** DAY 2
+
+RECAP 
+Cloud basics - service and deployment models
+Global infra - REgion, AZ, Edge location 
+storage - s3,storage classes, pricing, lifecycle management ... 
+s3, glacier, ... 
+databases- rds , dynamodb, neptune, documentdb, elasticache... 
+compute, network, tools... 
+types of resources - managed, fully man, unmanaged.. 
+types of users - root, iam, federated 
+
+
+IaaS- Ec2, ECS, EKS.... 
+PaaS- bean stalk, light sail... 
+FaaS - lambda
+
+*** 3 types of interaction with aWS 
+1. Console - web gui
+2. CLI - cmd line interface
+3. API- programmatic 
+
+*** 3 types of resources 
+1. zonal - ec2 
+2. regional- vpc 
+3. Global - s3 
+
+eC2 - 
+EBS - elastic block store - persistent disks 
+
+Startup script?
+
+Mobile handset 
+HW , OS, builtin apps(system) + installed apps ..... 
+
+Face book , WA, ( pre defined installation setup)- optional
+
++ password 
+
+start up script - shell script - optional
+
+#!/bin/bash
+yum update -y
+yum install -y httpd24 php56 mysql55-server php56-mysqlnd
+service httpd start
+chkconfig httpd on
+
+LAMP stack  - linux(OS),  apache sql(webserver), mysql(db),php(script) 
+
+security group - added security - firewalls 
+
+Key - value pair :: Bank lockers 
+
+employee- company ID card with emp# and name - Private IP 
+working for client - client ID card/emailID - Public IP 
+
+IPv4 Public IP
+52.12.222.196   |  NEW IP :34.213.145.221
+Private IPs
+172.31.61.227  | NEW IP : 172.31.61.227
+
+
+www.subhamita.com -> 34.212.99.138 [ irrespective of restarts]
+
+ElasticIP - reserving an IP for my site
+
+After EIP: 34.212.99.138
+
+** STEPS to connect to VM from backend using SSH - Putty interface
+1. Use Putty gen software to convert .pem -> .ppk file 
+2. Load - locate the .pem file -> save Private key as .ppk file 
+3. Use this key as authenticatino in your Putty interface 
+
+FOR OPEN NETWORK within Infy 
+RAISE AN AHD : https://cloudconnect/ [ Open in IE ] 
+
+login as: ec2-user
+
+containers - bundling both app + dependent libraries -> portability
+ECS, EKS- kubernetes (k8s- open source orchestratino system) 
+
+Elastic Beanstalk
+Environment - s3, EIP, security group, VM 
+
+
+Networking 
+1. VPC - for own security
+2. Direct connect  - bridge b/w your dc + amazon dc. 
+3. Cloud front 
+4. Route 53 - DNS resolver 
+https://aws.amazon.com/route53/what-is-dns/ (22 min) 
+first 5 mins - detailed overview of dns - call helpdesk
+record sets : 
+A 
+NS  - Name server
+SOA  - Start of authority
+
+VPC : your own namespace - 
+- at the time of login - you'll have a default VPC  - CAMPUS 
+Employee - got an offer letter and he join the company 
+employee 	                                              AWS
+ID card      											 account 
+campus 													default VPC 
+building 												your own VPC 
+ -public - pantry, cafetarias.. 			  -public subnet- webserver, appserver 		
+ -private - ODCs, DC, 						-private subnet - DBs[ no direct internet]
+ 
+
+communication - voip, ping, mail, yammer ... 
+private communication - mail, call them mobile...
+
+Route table - updated 
+route table 
+IG - access to public 
+
+Cloud front - CDN - caching principle 
+
+
+
+Routing policies 
+1. linear round robin 
+2. Latency based  - fastest path
+3. Geo based - shortest path
+4. weighted round robin - 50,30,20.. 
+5. multivalue.. 
+
+
+
+****Management tools :
+1. Cloud Watch  - monitoring of resoruces under AWS - alarms [ lambda lab] 
+2. Cloud trail  - monitor activities on AWS [console/cli/api] - audit
+
+
+APN - PARNTER NETWORK PORTAL 
+https://partnercentral.awspartner.com/
+- sign up with Infy ID 
+
+Complete the technical PRofessional Elearnign :
+
+https://infosystechnologies.sharepoint.com/sites/ECOMCHDZ/courseware/Documents/AWS%20Technical%20Professional%20Accreditation%20Steps%20v%203.0.pdf
+
+ETA artifacts link:
+https://infosystechnologies.sharepoint.com/sites/ECOMCHDZ/courseware/Documents/Forms/MyView.aspx?RootFolder=%2Fsites%2FECOMCHDZ%2Fcourseware%2FDocuments%2FActive%20Cloud%20Courses&FolderCTID=0x01200039807DDD22324B4C9712711F11322E63&View=%7B0428E152-C604-40BE-AD6D-B5ED9CDB3014%7D
+
+
+ACTION ITEMS:
+1. LAB : Intro to Lambda https://www.qwiklabs.com/focuses/284?catalog_rank=%7B%22rank%22%3A1%2C%22num_filters%22%3A2%2C%22has_search%22%3Atrue%7D&parent=catalog&search_id=2573849
+
+2. route 53[optionallab ]- 1 credit https://www.qwiklabs.com/focuses/277?catalog_rank=%7B%22rank%22%3A1%2C%22num_filters%22%3A1%2C%22has_search%22%3Atrue%7D&parent=catalog&search_id=2574010
+
+3. Cloud front - Free lab - 
+k
+Introduction to Amazon CloudFront
+https://www.qwiklabs.com/focuses/270?catalog_rank=%7B%22rank%22%3A1%2C%22num_filters%22%3A1%2C%22has_search%22%3Atrue%7D&parent=catalog&search_id=2574081
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
