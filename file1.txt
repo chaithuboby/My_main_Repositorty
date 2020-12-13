@@ -9,3 +9,5 @@ H for Horse
 I for Indigo
 J for John
 K for Kite
+N for Night
+O for Owl
