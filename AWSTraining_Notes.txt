@@ -1,6 +1,0 @@
-DyNamo DB Use cases:
--------------------
-https://aws.amazon.com/blogs/database/dynamodb-streams-use-cases-and-design-patterns/
-
-
-http://iscls4apps/ITMS/Learning/Index
