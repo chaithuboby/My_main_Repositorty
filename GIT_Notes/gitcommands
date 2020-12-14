@@ -1,0 +1,125 @@
+My GIT repository:
+
+https://github.com/chaithuboby/My_main_Repositorty
+chaithuboby@gmail.com
+Kck@123!
+
+==========================
+
+GIT COMMANDS:
+
+Avoid merge commits for pulling
+You pull the latest changes from a remote repository, and if these changes are divergent, then by default Git creates merge commits. We can avoid this via following settings.
+
+git config --global branch.autosetuprebase always
+========================================
+git config --list
+
+git --version
+git clone https://github.com/chaithuboby/My_main_Repositorty.git
+==================================
+
+To set your global username/email configuration:
+Open the command line.
+
+Set your username:
+git config --global user.name "Chaithanya Krishna"
+
+Set your email address:
+git config --global user.email "chaithuboby@gmail.com"
+====================================
+Generate public private key pair
+
+eval `ssh-agent`     ->Run ssh agent before adding private keys
+
+ssh-keygen -t rsa -b 4096 -C "chaithuboby@gmail.com"
+
+ssh-add "C:\Chaithu\Learning\GITLEARN\My_main_Repositorty\chaithanyakey"   --> Add private key to git and .pub public key to github account
+
+=====================================================
+To use SSH mode of communication instead of HTTPS. This will prevent git from asking username and passsword everytime you push to remote
+
+git remote set-url origin git@github.com:chaithuboby/My_main_Repositorty.git
+
+=========================
+touch file1.txt
+git status -s
+git add file1.txt
+
+git commit -m "Initial commit"
+
+git log
+
+git show f59742906d651b06ded6e851bad2a82c87ea58ff
+git diff
+
+================
+The amend operation changes the last commit including your commit message; it creates a new commit ID.
+
+git commit --amend -m "Changing c for cat commit message"
+=================================
+git branch --> shows current branch
+=================
+
+git stash -> to park current status in Stash area
+
+git stash pop  -> To pop out changes out of stash and into the working area
+
+=====================
+
+Deleted AWS_ac_ra_web_01.pdf
+
+git checkout AWS_ac_ra_web_01.pdf   -> Will retrieve the deleted file1 before commit; 
+								    -> To remove the changes from the staging area
+==============
+
+.git/refs/heads/master file stores the commit ID of the HEAD pointer
+   
+git reset --soft HEAD~    -> Reset the head pointer back to one position(previous commit)
+
+===============
+
+Create tag:
+git tag -a 'Release_1_0' -m "December -13 2020 Tag"
+
+ git push origin tag Release_1_0
+ 
+ Delete tag
+ git tag -d Release_1_0
+ 
+ git push origin :Release_1_0
+ 
+ ===============
+ 
+ Create branch:    git branch branch_1
+ 
+ Switch to branch: git checkout branch_1
+ 
+ Delete local branch:-> First switch to anther branch and then delete
+ git checkout master
+ git branch -D branch_1
+ 
+ 
+ Delete remote branch:  git push origin --delete branch_1
+ 
+ =================
+ 
+ Merge feature branch with Master(feature has new commits on top of master):
+ 
+ git branch master  -> Switch to master branch
+ 
+ git merge origin/branch_1 -> Merges branch_1 to Master branch
+ 
+ git push origin master -> Sync master to remote
+ 
+ ===============
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
